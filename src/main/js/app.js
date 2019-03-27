@@ -3,6 +3,7 @@ const ReactDOM = require('react-dom');
 const client = require('./client');
 
 import EmployeeList from './components/EmployeeList';
+import CreateDialog from './components/CreateDialog';
 
 class App extends React.Component {
 
@@ -93,7 +94,16 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<EmployeeList employees={this.state.employees}/>
+			<div>
+			<CreateDialog 	attributes={this.state.attributes} onCreate={this.onCreate}/>
+			<EmployeeList 	employees={this.state.employees}
+							  links={this.state.links}
+							  pageSize={this.state.pageSize}
+							  onNavigate={this.onNavigate}
+							  onDelete={this.onDelete}
+							  updatePageSize={this.updatePageSize}
+							/>
+			</div>
 		)
 	}
 }
