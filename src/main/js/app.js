@@ -1,6 +1,8 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const client = require('./client');
+const follow = require('./follow');
+const root = '/api';
 
 import EmployeeList from './components/EmployeeList';
 import CreateDialog from './components/CreateDialog';

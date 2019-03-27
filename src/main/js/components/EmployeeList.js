@@ -80,7 +80,7 @@ export default class EmployeeList extends React.Component{
 					</tbody>
 				</table>
 				<div>
-					{navlinks}
+					{navLinks}
 				</div>
 			</div>
 		)
